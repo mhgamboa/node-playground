@@ -10,6 +10,7 @@ console.log(fs.existsSync("./docs")); //checks if folder exists
 console.log(fs.existsSync("./docs/blog1.txt")); //checks if folder exists
 console.log(fs.existsSync("./docs/blog2.txt")); //checks if folder exists
 
+//Creates/Deletes asset folder
 if (fs.existsSync("./assets")) {
   fs.rmdir("./assets", (err) => {
     if (err) console.log(err);
