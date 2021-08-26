@@ -1,0 +1,26 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "A place for me to practice Node.js. I am following The Net Ninja's [NodeJS Crash Course](https://youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhgamboa/node-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhgamboa/node-playground/issues"
+  },
+  "homepage": "https://github.com/mhgamboa/node-playground#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
