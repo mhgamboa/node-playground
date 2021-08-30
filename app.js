@@ -11,18 +11,22 @@ app.set("view engine", "ejs");
 app.listen(3000);
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", { title: "Home Page" });
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "about.html"));
+  const blogs = [
+    { title: "You", snippet: "You are cool." },
+    { title: "Me", snippet: "I am cool" },
+    { title: "She", snippet: "She is cool" },
+  ];
+  res.render("about", { title: "About Me" });
 });
 
-// Redirecot for /about-me
-app.get("/about-me", (req, res) => {
-  res.redirect("/about");
+app.get("/blogs/create", (req, res) => {
+  res.redirect("create.ejs", { title: "Create A New Blog Post" });
 });
 
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+  res.status(404).render("404.ejs", { title: "Page Not Found" });
 });
