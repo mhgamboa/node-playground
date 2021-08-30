@@ -11,5 +11,10 @@
       <a href="/">Homepage</a>
       <a href="/about">About page</a>
     </nav>
+
+    <%blogs.forEach(blog => { %>
+    <h3 class="title"><%= blog.title %></h3>
+    <p class="snippet"><%= blog.snippet %></p>
+    <%}); %>
   </body>
 </html>
