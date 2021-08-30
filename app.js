@@ -4,10 +4,14 @@ const path = require("path");
 // Create Express App
 const app = express();
 
+// Register View Engine
+app.set("view engine", "ejs");
+
+// Listen for requests on port 3000
 app.listen(3000);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
+  res.render("index.ejs");
 });
 
 app.get("/about", (req, res) => {
